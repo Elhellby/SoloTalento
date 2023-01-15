@@ -90,10 +90,10 @@ export class ClientComponent implements OnInit {
               action = 'guardado'
               break
             case 'put':
-              action = 'guardado'
+              action = 'actualizado'
               break
             case 'delete':
-              action = 'guardado'
+              action = 'eliminado'
               break
             default:
               action = ''

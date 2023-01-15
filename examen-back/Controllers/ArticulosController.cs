@@ -35,11 +35,11 @@ public class ArticulosController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<bool>> Post(Articulos articulos)
+    public async Task<ActionResult> Post(Articulos articulos)
     {
         _context.Articulos.Add(articulos);
         int save = await _context.SaveChangesAsync();
-        return new CreatedAtRouteResult("get",new {id=articulos.IdArticulo},articulos);
+        return Ok();
     }
 
     [HttpPut("{id}")]

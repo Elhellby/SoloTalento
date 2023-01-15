@@ -1,6 +1,44 @@
-<div>
-    <app-navbar></app-navbar>
-</div>
-<div>
+<app-navbar></app-navbar>
+<div class="container-fluid h-100">
+    <div class="row p-3 h-50">
+        <div class="col-5">
+            <ag-grid-angular class="ag-theme-alpine-dark fullgrid" [rowData]="rowData" [columnDefs]="columnDefs"
+                [pagination]="true" (rowDoubleClicked)="rowDoubleClicked($event)">
+            </ag-grid-angular>
+        </div>
+        <div class="col-7">
+            <form [formGroup]="formProduct">
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label disabled">Id</label>
+                    <input type="text" class="form-control" formControlName="idArticulo" [disabled]="true" [(ngModel)]="idArticulo">
+                </div>
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label">Código</label>
+                    <input type="text" class="form-control" formControlName="codigo" [(ngModel)]="codigo">
+                </div>
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" formControlName="descripcion" [(ngModel)]="descripcion">
+                </div>
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label">Precio</label>
+                    <input type="number" class="form-control" formControlName="precio" [(ngModel)]="precio">
+                </div>
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" formControlName="imagen" [(ngModel)]="imagen">
+                </div>
+                <div class="mb-12">
+                    <label for="exampleFormControlInput1" class="form-label">Stock</label>
+                    <input type="number" class="form-control" formControlName="stock" [(ngModel)]="stock">
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end p-3">
+                    <button type="button" class="btn btn-danger m-1" (click)="save('delete')">Eliminar</button>                    
+                    <button type="button" class="btn btn-warning m-1" (click)="save('put')">Actualizar</button>
+                    <button type="button" class="btn btn-primary m-1" (click)="save('post')">Gurardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </div>

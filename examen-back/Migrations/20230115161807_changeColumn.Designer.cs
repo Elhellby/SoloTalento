@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using examen_back.Data;
 
@@ -11,9 +12,11 @@ using examen_back.Data;
 namespace examenback.Migrations
 {
     [DbContext(typeof(SoloTalentoDbContext))]
-    partial class SoloTalentoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230115161807_changeColumn")]
+    partial class changeColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -8,5 +8,5 @@ public class Tiendas
     [Key]
     public int IdTienda { get; set; }
     public string? Sucursal { get; set; }
-    public string? Dirección { get; set; }
+    public string? Direccion { get; set; }
 }
