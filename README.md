@@ -1,4 +1,4 @@
-# Prueba ecnica SOloTalento
+# Prueba ecnica SoloTalento
 
 EL repositorio contiene el proyecto de backend y forntend
 
