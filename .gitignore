@@ -1,3 +1,6 @@
 
 examen-back/bin
 examen-back/obj
+
+examen-front/node_modules
+examen-front/.angular
